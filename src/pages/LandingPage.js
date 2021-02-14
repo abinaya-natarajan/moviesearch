@@ -18,20 +18,36 @@ class LandingPage extends React.Component {
         fetch('http://api.tvmaze.com/shows')
         .then(response => response.json())
         .then(data => this.setState({ 
-            movieList: data 
+            movieList: data, filterData: data, dataList: data
         }))
+        
+        
+
+        // fetch('http://api.tvmaze.com/shows')
+        // .then(response => response.json())
+        // .then(data => this.setState({ 
+        //     movieList: data.forEach(element => {
+        //         element.genres.forEach(genre => {
+        //             result.push(element);
+        //         })
+                
+        //     })
+            
+        // }))
+
     }
 
 
 
 
     render() {
-        const { movieList } = this.state;
+        const { movieList, filterData } = this.state;
+        console.log(filterData);
         return (
             <div className="landipageContainer">
-                <Filter/>
-                {movieList.map(function(listItem) {
-                   return <PromoContainer {...listItem}/>
+                <Filter filterData={filterData}/>
+                {movieList.map(listItem => {
+                   return <PromoContainer {...listItem} />
                 })}
                 
             </div>

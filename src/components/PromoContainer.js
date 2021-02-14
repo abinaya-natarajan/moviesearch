@@ -10,7 +10,7 @@ class PromoContainer extends React.Component {
     render() {
         const { id, name, image } = this.props;
         return (
-            <div className="promoWrapper">
+            <div className="promoContainerWrapper">
                 <PromoTile imageSrc={image} alt={name}/>
                 <p>{id}</p>
                 <p>{name}</p>
