@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +11,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #333333;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.landipageContainer {
+  display: flex;
+}
+
+.promoWrapper {
+  width: 80%;
+  border: 3px solid palegreen;
+}
+
+.promotileContainer {
+  width: 25%;
+}
+
+.filterContainer {
+  width: 20%;
+  border: 1px solid palevioletred;
 }
